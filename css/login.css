@@ -1,0 +1,295 @@
+/* RESET LIGERO */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'PPierSans';
+  src: url('../Fonts/PPPierSans-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PPierSans';
+  src: url('../Fonts/PPPierSans-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'SegoeUI-Light';
+  src: url('../Fonts/segoe-ui-light.ttf') format('truetype');
+  font-weight: normal;
+}
+
+/* Variables */
+:root {
+  --accent-color: #1f7a4d;             /* Verde oscuro principal */
+  --accent-color-hover: #145c39;       /* Verde aún más oscuro al hacer hover */
+  --secondary-color: rgba(0, 20, 10, 0.6);
+  --primary-color: rgba(0, 15, 5, 0.85); /* Fondo contenedor más oscuro */
+  --text-color: #d2ffe0;
+
+  --font-base: 'PPierSans', sans-serif;
+
+  --ease: ease-in-out;
+  --fast: 0.2s var(--ease);
+  --med: 0.3s var(--ease);
+}
+
+#background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #1b1b1b, #004724, #0a0a0a, #141e30);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s infinite ease-in-out;
+  z-index: -1;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+body {
+  font-family: var(--font-base);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  backdrop-filter: brightness(0.85);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+  width: 600px;
+  padding: 70px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  transition: background-color var(--med);
+}
+
+.logo {
+  width: 50px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+hr {
+  background-color: var(--accent-color);
+  border: none;
+  height: 1px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.inf-group {
+  margin-top: 20px;
+}
+
+.information {
+  padding-bottom: 16px;
+}
+
+.label-group {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+
+.eye-icon {
+  display: none;
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+.eye-icon-closed {
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+input,
+select {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 300px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px;
+  transition: border-color var(--med), transform var(--med);
+}
+
+input:hover,
+select:hover {
+  border-color: #ffffff;
+  transform: scale(1.02);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-color-hover);
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.login-button {
+  font-family: 'SegoeUI-Light';
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: var(--accent-color-hover);
+  transform: scale(1.05);
+}
+
+.login-button:active {
+  transform: scale(0.95);
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E91429;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 100%;
+}
+
+.alert-circle {
+  height: 25px;
+  margin-right: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+  transform: scale(1.5);
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23d2ffe0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+select option {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--font-base);
+  font-size: 16px;
+}
+
+select option[disabled][selected] {
+  color: #888888;
+}
+
+select:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.forgot-password {
+  color: var(--text-color);
+  text-align: center;
+  padding-top: 20px;
+}
+
+.forgot-password a {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: underline;
+  transition: 300ms ease;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.register-link {
+  color: var(--text-color);
+  text-align: center;
+  padding-top: 35px;
+}
+
+.register-link p {
+  color: var(--accent-color-hover);
+  font-weight: 700;
+  transition: 300ms ease;
+}
+
+.register-link a {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: underline;
+  transition: 300ms ease;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+  color: var(--text-color);
+}

@@ -1,0 +1,230 @@
+
+Warning: Undefined variable $date in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php on line 17
+Fecha de consulta: 
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/03/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/04/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/05/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/06/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/07/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Alertas activas para BTC marcadas como pendientes.
+Alertas activas para ETH marcadas como pendientes.
+Alertas activas para EUR marcadas como pendientes.
+Alertas activas para XAG marcadas como pendientes.
+Alertas activas para XAU marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/08/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Alertas activas para BTC marcadas como pendientes.
+Alertas activas para ETH marcadas como pendientes.
+Alertas activas para EUR marcadas como pendientes.
+Alertas activas para XAG marcadas como pendientes.
+Alertas activas para XAU marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/09/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Alertas activas para BTC marcadas como pendientes.
+Alertas activas para ETH marcadas como pendientes.
+Alertas activas para EUR marcadas como pendientes.
+Alertas activas para XAG marcadas como pendientes.
+Alertas activas para XAU marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/10/2025 03:00:01 am
+Alertas activas para BTC marcadas como pendientes.
+Alertas activas para ETH marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Alertas activas para BTC marcadas como pendientes.
+Alertas activas para ETH marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/11/2025 03:00:01 am
+Alertas activas para ETH marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Alertas activas para ETH marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/12/2025 03:00:01 am
+Alertas activas para ETH marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Alertas activas para ETH marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/13/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/14/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de EUR guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+Fecha de consulta: 05/15/2025 03:00:01 am
+Alertas activas para ETH marcadas como pendientes.
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+
+Fatal error: Uncaught Error: Call to undefined function appendToAuditLog() in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php:208
+Stack trace:
+#0 {main}
+  thrown in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php on line 208
+Fecha de consulta: 05/16/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+
+Fatal error: Uncaught Error: Call to undefined function appendToAuditLog() in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php:210
+Stack trace:
+#0 {main}
+  thrown in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php on line 210
+Fecha de consulta: 05/17/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+
+Fatal error: Uncaught Error: Call to undefined function appendToAuditLog() in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php:210
+Stack trace:
+#0 {main}
+  thrown in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php on line 210
+Fecha de consulta: 05/18/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+
+Fatal error: Uncaught Error: Call to undefined function appendToAuditLog() in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php:210
+Stack trace:
+#0 {main}
+  thrown in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php on line 210
+Fecha de consulta: 05/19/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+
+Fatal error: Uncaught Error: Call to undefined function appendToAuditLog() in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php:210
+Stack trace:
+#0 {main}
+  thrown in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php on line 210
+Fecha de consulta: 05/20/2025 03:00:01 am
+Datos de BTC guardados correctamente.
+Datos de ETH guardados correctamente.
+Datos de USD guardados correctamente.
+Datos de XAG guardados correctamente.
+Datos de XAU guardados correctamente.
+
+Fatal error: Uncaught Error: Call to undefined function appendToAuditLog() in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php:210
+Stack trace:
+#0 {main}
+  thrown in /opt/lampp/htdocs/Nessun_Dorma/PHP/fetch_rates.php on line 210

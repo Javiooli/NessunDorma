@@ -1,0 +1,372 @@
+@font-face {
+    font-family: 'PPierSans';
+    src: url('../../Fonts/PPPierSans-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+  
+@font-face {
+    font-family: 'PPierSans';
+    src: url('../../Fonts/PPPierSans-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+  
+@font-face {
+    font-family: 'SegoeUI-Light';
+    src: url('../../Fonts/segoe-ui-light.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+    --accent-color: #30d695;
+    --accent-color-hover: #269c6f;
+    --secondary-color: #2e2e2e;
+    --primary-color: #181818;
+    --text-color: #ffffff;
+    --danger-color: #b04b4b;
+    --danger-color-hover: #903a3a;
+    --info-color: #4b8fb0;
+    --info-color-hover: #3a6f8f;
+}
+
+div.plotly-notifier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'PPierSans';
+    margin: 0;
+}
+
+/* DESKTOP VERSION */
+/* HEADER */
+/* DESACTIVAMOS EL HEADER EN VERSION DE DESKTOP */
+.header-content {
+    display: none;
+}
+
+.header-aside{
+    display: none;
+}
+
+/* ASIDE */
+.aside {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    border-right: solid 2px var(--accent-color);
+    background-color: var(--secondary-color);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.aside-content img {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.aside-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-menu {
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-menu:hover {
+    background-color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+.link-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s ease;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.link-menu a:hover {
+    color: var(--primary-color);
+}
+
+.link-menu strong {
+    background-color: #ff5722; /* Reddish-orange background */
+    color: #ffffff; /* White text */
+    font-size: 12px; /* Smaller font size */
+    font-weight: bold; /* Make the text bold */
+    padding: 0; /* Remove extra padding */
+    border-radius: 50%; /* Makes it round */
+    width: 20px; /* Ensures a consistent circular size */
+    height: 20px; /* Matches width for a perfect circle */
+    display: inline-flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
+    margin-left: 5px; /* Adds a small gap from the 'Mercado' text */
+    padding-right: 2px;
+    vertical-align: middle; /* Aligns it with the text baseline */
+    cursor: default; /* Indicates it's not clickable */
+}
+
+/*CLOSE SESSION*/
+
+.close-session-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.close-session {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+
+.close-session:hover {
+    background-color: var(--accent-color-hover);
+}
+.close-session:active {
+    transform: scale(0.95);
+}
+.close-session svg {
+    width: 20px;
+    height: auto;
+    stroke: var(--text-color);
+    transition: transform 300ms ease;
+}
+
+/* MAIN */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 50px;
+}
+
+/* MAIN HEADER */
+.main-header{
+    display: flex;
+    align-items: left;
+    width: 100%;
+}
+
+.main-content h1 {
+    color: var(--accent-color);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 24px;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* USERS TABLE */
+.main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    overflow-y: auto;
+    border-radius: 20px;
+    border: solid 1px var(--accent-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    margin-top: 30px;
+    padding: 30px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.users-table th {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.users-table td {
+    background-color: rgba(255, 255, 255, 0.02);
+    color: var(--text-color);
+    padding: 12px 20px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+}
+
+.users-table tr:hover td {
+    background-color: rgba(48, 214, 149, 0.05);
+}
+
+/* EDIT BUTTON */
+.back-button {
+    font-family: 'PPierSans';
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color: var(--accent-color-hover);
+}
+.back-button:active {
+    transform: scale(0.95);
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+    /* HEADER */
+    .header-content {
+        display: flex;
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary-color)ce;
+    }
+
+    .header-content h2 {
+        color: var(--accent-color);
+        font-size: 24px;
+        padding: 0;
+    }
+
+    /* BOTON DESPLEGABLE */
+    .menu-btn {
+        background: #00000020;
+        color: #FFFFFF;
+        width: auto;
+        height: 40px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .menu-btn:hover {
+        background: var(--accent-color);
+        cursor: pointer;
+    }
+
+    .menu-btn:active {
+        background: #008140;
+    }
+
+    /* DESPLEGABLE */
+    .header-aside {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        transform: translateY(-102%);
+        transition: transform 0.4s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+    
+    .header-aside.show {
+        transform: translateY(0);
+    }
+
+    .aside-content img {
+        font-size: 28px;
+        color: var(--accent-color);
+        text-align: center;
+        margin: 0 0 20px 0;
+        letter-spacing: 1px;
+    }
+    
+    /* BOTON DE CIERRE */
+    .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-btn svg {
+        width: 28px;
+        height: 28px;
+        color: #ffffff;
+        fill: #ffffff;
+        transition: transform 0.3s ease, fill 0.3s ease;
+    }
+
+    .close-btn:hover svg {
+        transform: rotate(90deg);
+        background-color: transparent;
+        color: red;
+    }
+
+    /* ASIDE */
+    .aside {
+        display: none;
+    }
+
+    /* MAIN */
+    .main-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

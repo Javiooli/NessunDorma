@@ -1,0 +1,775 @@
+@font-face {
+    font-family: 'PPierSans';
+    src: url('../Fonts/PPPierSans-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+  
+@font-face {
+    font-family: 'PPierSans';
+    src: url('../Fonts/PPPierSans-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+  
+@font-face {
+    font-family: 'SegoeUI-Light';
+    src: url('../Fonts/segoe-ui-light.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+    --accent-color: #30d695;
+    --accent-color-hover: #269c6f;
+    --secondary-color: #2e2e2e;
+    --primary-color: #181818;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--primary-color);
+    /* REVISAR BACKGROUND COLOR 
+    background: linear-gradient(to bottom, #121212, #2A2A2A);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    */
+    font-family: 'PPierSans';
+    margin: 0;
+}
+
+/* DESKTOP VERSION */
+/* HEADER */
+/* DESACTIVAMOS EL HEADER EN VERSION DE DESKTOP */
+.header-content {
+    display: none;
+}
+
+.header-aside{
+    display: none;
+}
+
+/* ASIDE */
+.aside {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  border-right: solid 2px var(--accent-color);
+  background-color: var(--secondary-color);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.aside-content img {
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.aside-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aside-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-menu {
+  display: block;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-menu:hover {
+  background-color: var(--accent-color);
+  transform: translateX(10px);
+}
+
+.link-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: color 0.3s ease;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.link-menu a:hover {
+  color: var(--primary-color);
+}
+
+.link-menu strong {
+  background-color: #ff5722; /* Reddish-orange background */
+  color: #ffffff; /* White text */
+  font-size: 12px; /* Smaller font size */
+  font-weight: bold; /* Make the text bold */
+  padding: 0; /* Remove extra padding */
+  border-radius: 50%; /* Makes it round */
+  width: 20px; /* Ensures a consistent circular size */
+  height: 20px; /* Matches width for a perfect circle */
+  display: inline-flex; /* Use flexbox for centering */
+  align-items: center; /* Vertically centers the text */
+  justify-content: center; /* Horizontally centers the text */
+  margin-left: 5px; /* Adds a small gap from the 'Mercado' text */
+  padding-right: 2px;
+  vertical-align: middle; /* Aligns it with the text baseline */
+  cursor: default; /* Indicates it's not clickable */
+}
+
+/*CLOSE SESSION*/
+
+.close-session-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.close-session {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+
+.close-session:hover {
+    background-color: var(--accent-color-hover);
+}
+.close-session:active {
+    transform: scale(0.95);
+}
+.close-session svg {
+    width: 20px;
+    height: auto;
+    stroke: var(--text-color);
+    transition: transform 300ms ease;
+}
+
+/* MAIN */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 50px;
+}
+/* MAIN HEADER */
+.main-header{
+    display: flex;
+    align-items: left;
+    width: 100%;
+}
+
+.main-content h1 {
+    color: var(--accent-color);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* SECTIONS */
+.summary-container {
+    width: 100%;
+    height: 400px;
+    border-radius: 25px;
+    /* REVISAR BORDE */ 
+    border: solid 2px var(--accent-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+/* STYLE CONFIGURACIOO! */
+/* CONFIGURACION POR REVISAR */
+.encabezado-configuracion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 30px auto 20px auto;
+    max-width: 700px; /* MISMO que tarjeta-configuracion */
+    width: 90%;        /* adaptativo */
+  }
+  
+  .encabezado-configuracion h2 {
+    font-size: 22px;
+    color: var(--text-color);
+    margin: 0;
+  }
+  
+
+/* POP UP EDITAR PERFIL */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  padding-top: 100px;
+}
+
+.modal-contenido {
+  background-color: #2a2a2a;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid var(--accent-color);
+  width: 90%;
+  max-width: 450px;
+  border-radius: 12px;
+  color: white;
+}
+
+.cerrar-popup {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.grupo-form {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.grupo-form label {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.grupo-form input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.botones-popup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.botones-popup button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#confirmar-edicion {
+  background-color: var(--accent-color);
+  color: black;
+}
+
+#cancelar-edicion {
+  background-color: #666;
+  color: white;
+}
+
+/* efecto y color del calendario = al del registro */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1); 
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+  transform: scale(1.5); 
+}
+
+form#form-confirmacion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espacio entre campos */
+  max-width: 400px; /* o el ancho que uses para otros popups */
+  width: 100%;
+}
+form#form-confirmacion label,
+form#form-confirmacion input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+#grupo-nueva-contrasena {
+  width: 89%;
+}
+#input-nueva-contrasena {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* FIN POP UP EDITAR PERFIL */
+
+/* POP UP DE CONFIRMACION DE ACCION */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-contenido {
+  background-color: #2a2a2a;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid var(--accent-color);
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  color: white;
+}
+
+.cerrar-popup {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.botones-popup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.botones-popup button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 0.5rem; /* Adds horizontal spacing between buttons */
+}
+
+#confirmar-accion {
+  background-color: var(--accent-color);
+  color: black;
+}
+#confirm-password {
+  width: 100%;
+  max-width: 350px; /* largo del input */
+  margin: 0 auto;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+  color: white;
+  border: none;
+}
+#cancelar-accion {
+  background-color: #666;
+  color: white;
+}
+
+/* FIN DEL POP UP DE CONFIRMACION */
+
+.tarjeta-configuracion {
+  background-color: var(--secondary-color);
+  color: var(--text-color);   
+  padding: 20px;
+  border-radius: 8px;
+  width: 700px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+  
+.seccion-configuracion {
+  margin-bottom: 20px;
+}
+  
+.campo-configuracion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color:var(--primary-color);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.campo-configuracion label {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.campo-configuracion p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.boton-editar {
+  background-color: var(--secondary-color); /* Fondo oscuro */
+  color: var(--text-color); /* Texto blanco */
+  border: 2px solid var(--accent-color); /* Borde con color de acento */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 8px 12px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cursor de mano */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.boton-editar:hover {
+  background-color: var(--primary-color); /* Fondo más oscuro al pasar el ratón */
+  border-color: var(--accent-color-hover); /* Cambia el color del borde */
+  outline: none; /* Elimina el borde azul predeterminado */
+}
+
+.peligro .boton-eliminar {
+  background-color: #ed4245;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.boton-eliminar:hover {
+  background-color: #b53032;
+}
+
+
+.container-otp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: var(--secondary-color); /* Fondo oscuro */
+  border: 2px solid var(--accent-color); /* Borde con color de acento */
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  max-width: 400px; /* Limita el ancho máximo */
+  width: 90%; /* Se adapta a pantallas pequeñas */
+  box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+}
+
+.container-otp.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/*CLOSE BUTTON*/
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn svg {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  fill: #ffffff;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.close-btn:hover svg {
+  transform: rotate(90deg);
+  background-color: transparent;
+  color: red;
+}
+
+/* Container for the OTP popup */
+.container-otp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: var(--secondary-color); /* Fondo oscuro */
+    border: 2px solid var(--accent-color); /* Borde con color de acento */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra pronunciada */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    max-width: 400px; /* Limita el ancho máximo */
+    width: 90%; /* Se adapta a pantallas pequeñas */
+    box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+}
+
+/* Show state for the OTP popup */
+.container-otp.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Header of the popup */
+.popup-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    border-bottom: 2px solid var(--accent-color); /* Línea divisoria */
+}
+
+/* Close button */
+.close-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-color);
+    fill: var(--text-color);
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.close-btn:hover svg {
+    transform: rotate(90deg);
+    color: var(--danger-color);
+    fill: var(--danger-color);
+}
+
+/* Content inside the popup */
+.content-otp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px; /* Espaciado entre los elementos */
+    text-align: center;
+}
+
+/* Title of the popup */
+.content-otp h3 {
+    color: var(--text-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Message inside the popup */
+.content-otp p {
+    color: var(--text-color);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* QR code container */
+#qrcode {
+    margin: 20px 0;
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color); /* Fondo oscuro para el QR */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent-color); /* Borde del QR */
+    border-radius: 8px;
+}
+
+/* Secret text */
+#secret {
+    color: var(--text-color);
+    font-size: 14px;
+    word-break: break-word; /* Permite que el texto largo se divida */
+}
+
+/* Close button inside the popup */
+#boton-cerrar-otp {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#boton-cerrar-otp:hover {
+    background-color: var(--accent-color-hover);
+}
+
+#boton-cerrar-otp:active {
+    transform: scale(0.95);
+}
+
+/* FIIN DEL DIV DE CONFIGURACION */
+/* Estilo para el formulario de selección de divisa */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+/* Estilo para el select */
+form select {
+    background-color: var(--secondary-color); /* Fondo oscuro */
+    color: var(--text-color); /* Texto blanco */
+    border: 2px solid var(--accent-color); /* Borde con color de acento */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cursor de mano */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover y focus para el select */
+form select:hover,
+form select:focus {
+    background-color: var(--primary-color); /* Fondo más oscuro al pasar el ratón */
+    border-color: var(--accent-color-hover); /* Cambia el color del borde */
+    outline: none; /* Elimina el borde azul predeterminado */
+}
+
+/* Estilo para el input hidden (opcional, ya que no es visible) */
+form input[type="hidden"] {
+    display: none;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+    /* HEADER */
+    .header-content {
+        display: flex;
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary-color)ce;
+    }
+
+    .header-content h2 {
+        color: var(--accent-color);
+        font-size: 24px;
+        padding: 0;
+    }
+    .header-content h3 {
+        color: var(--accent-color);
+        font-size: 24px;
+        padding: 0;
+    }
+
+    /* BOTON DESPLEGABLE */
+    .menu-btn {
+        background: #00000020;
+        color: #FFFFFF;
+        width: auto;
+        height: 40px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .menu-btn:hover {
+        background: var(--accent-color);
+        cursor: pointer;
+    }
+
+    .menu-btn:active {
+        background: #008140;
+    }
+
+    /* DESPLEGABLE */
+    .header-aside {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        transform: translateY(-102%);
+        transition: transform 0.4s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+    
+    .header-aside.show {
+        transform: translateY(0);
+    }
+
+    .aside-content img {
+        font-size: 28px;
+        color: var(--accent-color);
+        text-align: center;
+        margin: 0 0 20px 0;
+        letter-spacing: 1px;
+    }
+    
+    /* BOTON DE CIERRE */
+    .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-btn svg {
+        width: 28px;
+        height: 28px;
+        color: #ffffff;
+        fill: #ffffff;
+        transition: transform 0.3s ease, fill 0.3s ease;
+    }
+
+    .close-btn:hover svg {
+        transform: rotate(90deg);
+        background-color: transparent;
+        color: red;
+    }
+
+    /* ASIDE */
+    .aside {
+        display: none;
+    }
+
+    /* MAIN */
+    .main-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

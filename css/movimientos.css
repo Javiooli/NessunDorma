@@ -1,0 +1,731 @@
+@font-face {
+    font-family: 'PPierSans';
+    src: url('../Fonts/PPPierSans-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+  
+@font-face {
+    font-family: 'PPierSans';
+    src: url('../Fonts/PPPierSans-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+  
+@font-face {
+    font-family: 'SegoeUI-Light';
+    src: url('../Fonts/segoe-ui-light.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+    --accent-color: #30d695;
+    --accent-color-hover: #269c6f;
+    --secondary-color: #2e2e2e;
+    --primary-color: #181818;
+    --text-color: #ffffff;
+    --danger-color: #b04b4b;
+    --danger-color-hover: #903a3a;
+}
+
+div.plotly-notifier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body {
+    background-color: var(--primary-color);
+    /* REVISAR BACKGROUND COLOR 
+    background: linear-gradient(to bottom, #121212, #2A2A2A);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    */
+    font-family: 'PPierSans';
+    margin: 0;
+}
+
+/* DESKTOP VERSION */
+/* HEADER */
+/* DESACTIVAMOS EL HEADER EN VERSION DE DESKTOP */
+.header-content {
+    display: none;
+}
+
+.header-aside{
+    display: none;
+}
+
+/* ASIDE */
+.aside {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    border-right: solid 2px var(--accent-color);
+    background-color: var(--secondary-color);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.aside-content img {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.aside-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-menu {
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-menu:hover {
+    background-color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+.link-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s ease;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.link-menu a:hover {
+    color: var(--primary-color);
+}
+
+.link-menu strong {
+    background-color: #ff5722; /* Reddish-orange background */
+    color: #ffffff; /* White text */
+    font-size: 12px; /* Smaller font size */
+    font-weight: bold; /* Make the text bold */
+    padding: 0; /* Remove extra padding */
+    border-radius: 50%; /* Makes it round */
+    width: 20px; /* Ensures a consistent circular size */
+    height: 20px; /* Matches width for a perfect circle */
+    display: inline-flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
+    margin-left: 5px; /* Adds a small gap from the 'Mercado' text */
+    padding-right: 2px;
+    vertical-align: middle; /* Aligns it with the text baseline */
+    cursor: default; /* Indicates it's not clickable */
+}
+
+/*CLOSE SESSION*/
+.close-session-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.close-session {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+
+.close-session:hover {
+    background-color: var(--accent-color-hover);
+}
+.close-session:active {
+    transform: scale(0.95);
+}
+.close-session svg {
+    width: 20px;
+    height: auto;
+    stroke: var(--text-color);
+    transition: transform 300ms ease;
+}
+
+/* MAIN */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 50px;
+}
+
+/* MAIN HEADER */
+.main-header{
+    display: flex;
+    align-items: left;
+    width: 100%;
+}
+
+.main-content h1 {
+    color: var(--accent-color);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* MAIN BUTTONS */
+.main-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin-top: 20px;
+}
+
+/* DROPDOWN */
+.custom-dropdown {
+    position: relative;
+    width: fit-content;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.dropdown-icon {
+    width: 20px;
+    height: auto;
+    margin-left: 8px;
+    transition: transform 300ms ease;
+}
+
+.custom-dropdown.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 175px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease, opacity 300ms ease;
+    z-index: 10;
+}
+
+.custom-dropdown.open .dropdown-menu {
+    max-height: 350px;
+    opacity: 1;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--accent-color);
+}
+
+/* ADD BUTTON */
+.add-btn {
+    background: var(--accent-color);
+    color: var(--text-color);
+    font-size: 26px;
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.add-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.add-btn:active {
+    transform: scale(0.95);
+}
+
+/* ADD FORM */
+/* REVISAR */
+/* Contenedor del Pop-Up */
+.add-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: var(--secondary-color); /* Fondo oscuro */
+    border: 2px solid var(--accent-color); /* Borde con color de acento */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    max-width: 400px; /* Limita el ancho máximo */
+    width: 90%; /* Se adapta a pantallas pequeñas */
+    box-sizing: border-box; /* Asegura que el padding no exceda el ancho */
+}
+
+/* Formulario dentro del Pop-Up */
+.add-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px; /* Espaciado entre los elementos */
+    position: relative;
+    width: 100%; /* Asegura que el formulario no exceda el ancho del contenedor */
+    box-sizing: border-box;
+}
+
+/* Inputs, Selects y Textarea */
+.add-form input,
+.add-form textarea,
+.add-form select {
+    width: 100%; /* Asegura que los elementos ocupen el 100% del ancho del formulario */
+    padding: 12px;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    background-color: var(--primary-color); /* Fondo oscuro */
+    color: var(--text-color); /* Texto blanco */
+    font-size: 14px;
+    box-sizing: border-box; /* Incluye el padding dentro del ancho */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al enfocar los Inputs */
+.add-form input:focus,
+.add-form textarea:focus,
+.add-form select:focus {
+    border-color: var(--accent-color-hover); /* Color de acento al enfocar */
+    box-shadow: 0 0 8px rgba(48, 214, 149, 0.5); /* Sombra suave */
+    outline: none;
+}
+
+/* Botón de Enviar */
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón de Cerrar */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.add-container.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+.add-form label {
+    color: var(--text-color); 
+    font-size: 14px; 
+    font-weight: bold; 
+}
+/*HASTA AQUI*/
+/*CLOSE BUTTON*/
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn svg {
+    width: 28px;
+    height: 28px;
+    color: #ffffff;
+    fill: #ffffff;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.close-btn:hover svg {
+    transform: rotate(90deg);
+    background-color: transparent;
+    color: red;
+}
+/*REVISAR*/
+/*ADD FORM ELEMENTS*/
+.add-form input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 300ms ease;
+}
+
+.add-form input:focus {
+    border-color: var(--accent-color-hover);
+    outline: none;
+}
+
+.add-form input::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.add-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 300ms ease;
+}
+.add-form textarea:focus {
+    border-color: var(--accent-color-hover);
+    outline: none;
+}
+.add-form textarea::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+.add-form select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 300ms ease;
+}
+.add-form select:focus {
+    border-color: var(--accent-color-hover);
+    outline: none;
+}
+.add-form select::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+.add-form label {
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+/*HASTA AQUI*/
+/*ADD BUTTON*/
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: var(--accent-color-hover);
+}
+.add-button:active {
+    transform: scale(0.95);
+}
+
+/* SECTIONS */
+.transactions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px; 
+    border: solid 2px var(--accent-color); 
+    background-color: var(--secondary-color); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); 
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto; /* joel: aumento del div container al añadir filas a la tabka */
+    padding-bottom: 50px;
+}
+
+.transactions-header {
+    display: flex;
+    align-items: left;
+    width: 95%;
+    color: #FFFFFF;
+}
+
+/* TABLE */
+.transactions-table {
+    width: 95%;
+    max-height: 95%;
+    border-radius: 25px;
+    border: solid 1px var(--accent-color);
+    border-collapse: collapse;
+}
+
+.transactions-table th{
+    background-color: var(--accent-color);
+    color: #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+.transactions-table td{
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    border: solid 1px var(--accent-color);
+}
+
+/* TABLE ACTIONS */
+.actions{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/* DELETE BUTTON */
+.delete-btn {
+    font-family: 'PPierSans';
+    background-color: var(--danger-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: var(--danger-color-hover);
+}
+.delete-btn:active {
+    transform: scale(0.95);
+}
+/* EDIT BUTTON */
+.edit-btn {
+    font-family: 'PPierSans';
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 300ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+.edit-btn:hover {
+    background-color: var(--accent-color-hover);
+}
+.edit-btn:active {
+    transform: scale(0.95);
+}
+
+/* DELETE ALERT */
+.delete-alert-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: var(--secondary-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.delete-alert-container.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+.delete-alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 90%;
+}
+.delete-alert h3 {
+    color: var(--text-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.delete-alert-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+    /* HEADER */
+    .header-content {
+        display: flex;
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--secondary-color)ce;
+    }
+
+    .header-content h2 {
+        color: var(--accent-color);
+        font-size: 24px;
+        padding: 0;
+    }
+
+    /* BOTON DESPLEGABLE */
+    .menu-btn {
+        background: #00000020;
+        color: #FFFFFF;
+        width: auto;
+        height: 40px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .menu-btn:hover {
+        background: var(--accent-color);
+        cursor: pointer;
+    }
+
+    .menu-btn:active {
+        background: #008140;
+    }
+
+    /* DESPLEGABLE */
+    .header-aside {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        transform: translateY(-102%);
+        transition: transform 0.4s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+    
+    .header-aside.show {
+        transform: translateY(0);
+    }
+
+    .aside-content img {
+        font-size: 28px;
+        color: var(--accent-color);
+        text-align: center;
+        margin: 0 0 20px 0;
+        letter-spacing: 1px;
+    }
+    
+    /* BOTON DE CIERRE */
+    .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-btn svg {
+        width: 28px;
+        height: 28px;
+        color: #ffffff;
+        fill: #ffffff;
+        transition: transform 0.3s ease, fill 0.3s ease;
+    }
+
+    .close-btn:hover svg {
+        transform: rotate(90deg);
+        background-color: transparent;
+        color: red;
+    }
+
+    /* ASIDE */
+    .aside {
+        display: none;
+    }
+
+    /* MAIN */
+    .main-content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
